@@ -24,8 +24,10 @@ module.exports = function toReadable(number){
         break;
 
         case 3:
-            resultString = oneToNine[arr[0]] + " hundred " + tenToNinety[arr[1]] + " "+ oneToNine[arr[2]];
-        break;
+            if(arr[1] == 1) resultString = oneToNine[arr[0]] + " hundred" + " " + elevenToNineteen[arr[1]];
+            else
+            resultString = oneToNine[arr[0]] + " hundred " + tenToNinety[arr[1]] + " "+ oneToNine[arr[2]];       
+            break;
     }
 
     }
