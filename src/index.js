@@ -36,7 +36,7 @@ module.exports = function toReadable(number){
         if (number == 10) resultString = "ten";
         }
 
-    return resultString;
+    return resultString.trim();
 }
 
 
