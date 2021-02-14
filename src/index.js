@@ -4,8 +4,8 @@ module.exports = function toReadable(number){
 
     let arr =(number + "").split("");
     let oneToNine = ["", "one", "two", "three", "four", "five","six", "seven", "eight", "nine"];
-    let elevenToNineteen = ["", "eleven", "twelve", "thirteen", "fourteen", "fiveteen",
-                                "sixteen", "seventeen", "eightteen", "nineteen"];
+    let elevenToNineteen = ["", "eleven", "twelve", "thirteen", "fourteen", "fifteen",
+                                "sixteen", "seventeen", "eighteen", "nineteen"];
     let tenToNinety = ["", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"];
 
     switch(arr.length){
