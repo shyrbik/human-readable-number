@@ -1,27 +1,40 @@
-module.exports = function toReadable (number) {
+module.exports = function toReadable(number){
     let resultString = "";
-    let arrayForRead = [];
-    let arrayForRead = [];
-    let i = 0;
-    while (numberForArray > 1) {
-        arrayForRead[i] = numberForArray%10;
-        i++;
-    numberForArray = (numberForArray - numberForArray%10) / 10;
-       if (numberForArray < 10) {
-           arrayForRead[i] = numberForArray;
-       }
+    if ( (number != 0) && (number !=10)) {
+
+    let arr =(number + "").split("");
+    let oneToNine = ["", "one", "two", "three", "four", "five","six", "seven", "eight", "nine"];
+    let elevenToNineteen = ["", "eleven", "twelve", "thirteen", "fourteen", "fiveteen",
+                                "sixteen", "seventeen", "eightteen", "nineteen"];
+    let tenToNinety = ["", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"];
+
+    switch(arr.length){
+        //1-9
+        case 1:
+        resultString = oneToNine[arr[0]];
+        break;
+        //11-
+        case 2:
+         if(number < 20){
+         resultString = elevenToNineteen[arr[1]];
+         }
+         else
+         resultString = tenToNinety[arr[0]] + " " + oneToNine[arr[1]];
+        //11-
+        break;
+
+        case 3:
+            resultString = oneToNine[arr[0]] + " hungred " + tenToNinety[arr[1]] + " "+ oneToNine[arr[2]];
+        break;
     }
-    
-    let numberToWordArray = ["zero", "one", "two", "three", "four", "five","six", "seven", "eight", "nine"];
-
-    for (let i = arrayForRead.length-1; i > 0; i--) {
-		
-        console.log(arrayForRead[i])
-        resultString += numberToWordArray[arrayForRead[i]] + " ";
 
     }
+    else {
+        if (number == 0) resultString = "zero";
+        if (number == 10) resultString = "ten";
+        }
 
-    return resultString.trim();
+    return resultString;
 }
 
 
