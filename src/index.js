@@ -24,7 +24,7 @@ module.exports = function toReadable(number){
         break;
 
         case 3:
-            resultString = oneToNine[arr[0]] + " hungred " + tenToNinety[arr[1]] + " "+ oneToNine[arr[2]];
+            resultString = oneToNine[arr[0]] + " hundred " + tenToNinety[arr[1]] + " "+ oneToNine[arr[2]];
         break;
     }
 
